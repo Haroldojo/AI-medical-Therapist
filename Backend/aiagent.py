@@ -1,6 +1,11 @@
+import os
 from langchain.agents import tool
 from tools import query_gemma, call_emergency
+from dotenv import load_dotenv
 from config import API_KEY
+
+load_dotenv()
+
 
 @tool
 def ask_mental_health_speacialist(query: str) -> str:
@@ -54,7 +59,7 @@ tools = [ask_mental_health_speacialist, emergency_call_tool, find_nearby_therapi
 
 # Create Groq model properly for LangGraph
 groq_model = ChatGroq(
-    api_key=os.getenv(API_KEY),
+    api_key=API_KEY,
     model="llama3-8b-8192",
     temperature=0.7
 )

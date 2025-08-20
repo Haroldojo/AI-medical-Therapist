@@ -55,7 +55,3 @@ def call_emergency():
         from_=TWILIO_FROM_NUMBER,
         url="http://demo.twilio.com/docs/voice.xml"  # Customize if needed
     )
-
-# Step3:Setup location tool
-# Step1:Setup ollama
-# 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 groq
