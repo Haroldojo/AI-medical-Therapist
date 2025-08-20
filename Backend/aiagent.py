@@ -54,7 +54,7 @@ tools = [ask_mental_health_speacialist, emergency_call_tool, find_nearby_therapi
 
 # Create Groq model properly for LangGraph
 groq_model = ChatGroq(
-    api_key=API_KEY,
+    api_key=os.getenv(API_KEY),
     model="llama3-8b-8192",
     temperature=0.7
 )
