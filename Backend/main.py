@@ -2,7 +2,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import uvicorn
-from aiagent import graph,SYSTEM_PROMPT,parse_response
+from .aiagent import graph,SYSTEM_PROMPT,parse_response
 
 
 app = FastAPI()
